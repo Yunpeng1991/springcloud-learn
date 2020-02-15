@@ -1,4 +1,4 @@
-package com.yp.demo.rabbitmq.simple.exchange.fanout;
+package com.yp.demo.rabbitmq.exchange.fanout;
 
 import com.yp.demo.rabbitmq.config.MqConstants;
 import com.yp.demo.rabbitmq.config.RuntimeEnvConfig;

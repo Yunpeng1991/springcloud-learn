@@ -1,4 +1,4 @@
-package com.yp.demo.rabbitmq.simple.producer;
+package com.yp.demo.rabbitmq.producer;
 
 import com.yp.demo.rabbitmq.config.MqConstants;
 import lombok.extern.slf4j.Slf4j;

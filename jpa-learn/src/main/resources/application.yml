@@ -1,0 +1,22 @@
+server:
+  port: 9080
+
+
+spring:
+  application:
+    name: jps-app
+
+
+---
+spring:
+  profiles: local
+---
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: preprod
+---
+spring:
+  profiles: prod

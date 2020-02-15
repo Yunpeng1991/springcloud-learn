@@ -1,5 +1,5 @@
 
-package com.yp.demo.rabbitmq.simple.exchange.topic;
+package com.yp.demo.rabbitmq.exchange.topic;
 
 import com.yp.demo.rabbitmq.config.MqConstants;
 import org.springframework.amqp.core.*;
