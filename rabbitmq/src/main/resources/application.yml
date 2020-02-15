@@ -1,0 +1,29 @@
+server:
+  port: 9090
+
+
+spring:
+  application:
+    name: rabbit-mq-app
+
+
+---
+spring:
+  profiles: local
+  rabbitmq:
+    host: 10.211.55.6
+    port: 5672
+    username: guest
+    password: guest
+    publisher-returns: true
+    publisher-confirm-type: correlated
+---
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: preprod
+---
+spring:
+  profiles: prod
