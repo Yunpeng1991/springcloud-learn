@@ -1,4 +1,4 @@
-package com.yp.demo.rabbitmq.exchange.fanout;
+package com.yp.demo.rabbitmq.simple.exchange.fanout;
 
 import com.yp.demo.rabbitmq.config.MqConstants;
 import com.yp.demo.rabbitmq.config.RuntimeEnvConfig;
@@ -6,7 +6,6 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

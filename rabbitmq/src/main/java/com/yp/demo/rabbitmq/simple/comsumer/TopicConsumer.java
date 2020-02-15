@@ -1,4 +1,4 @@
-package com.yp.demo.rabbitmq.comsumer;
+package com.yp.demo.rabbitmq.simple.comsumer;
 
 import com.yp.demo.rabbitmq.config.MqConstants;
 import com.yp.demo.rabbitmq.vo.MsgVO;

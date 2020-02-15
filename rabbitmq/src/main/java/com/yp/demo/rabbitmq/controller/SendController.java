@@ -1,9 +1,9 @@
 
 package com.yp.demo.rabbitmq.controller;
 
-import com.yp.demo.rabbitmq.producer.DirectProducer;
-import com.yp.demo.rabbitmq.producer.FanoutProducer;
-import com.yp.demo.rabbitmq.producer.TopicProducer;
+import com.yp.demo.rabbitmq.simple.producer.DirectProducer;
+import com.yp.demo.rabbitmq.simple.producer.FanoutProducer;
+import com.yp.demo.rabbitmq.simple.producer.TopicProducer;
 import com.yp.demo.rabbitmq.vo.MsgVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

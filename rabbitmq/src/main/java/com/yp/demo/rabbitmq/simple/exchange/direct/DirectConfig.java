@@ -1,4 +1,4 @@
-package com.yp.demo.rabbitmq.exchange.direct;
+package com.yp.demo.rabbitmq.simple.exchange.direct;
 
 import com.yp.demo.rabbitmq.config.MqConstants;
 import com.yp.demo.rabbitmq.config.RuntimeEnvConfig;
