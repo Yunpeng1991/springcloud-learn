@@ -10,19 +10,19 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DirectConsumer {
 
-    /*test fanout:相同exchangeType，相同RouteKey，不同queue实现类似广播的功能*/
+    /*test fanout:相同RouteKey，不同queue实现类相同exchangeType，似广播的功能*/
 
     @RabbitHandler
     @RabbitListener( queues = {"#{rabbitConfigProperties.getProperty('"+MqConstants.Direct.DIRECT_QUEUE_NAME_A+"')}"})
     public void  consumerP2P(String msg){
-        log.info("[DIRECT CONSUMER] test A, msg={}",msg);
+        log.info("[DIRECT CONSUMER] queueA test A, msg={}",msg);
     }
 
     /*test P2P*/
     @RabbitHandler
     @RabbitListener( queues = {"#{rabbitConfigProperties.getProperty('"+MqConstants.Direct.DIRECT_QUEUE_NAME_B+"')}"})
     public void  consumerRandom(String msg){
-        log.info("[DIRECT CONSUMER] test B, msg={}",msg);
+        log.info("[DIRECT CONSUMER] queueB test B, msg={}",msg);
     }
 
 

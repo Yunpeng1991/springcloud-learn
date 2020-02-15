@@ -1,37 +1,48 @@
 package com.yp.demo.rabbitmq.exchange.fanout;
 
+import com.yp.demo.rabbitmq.config.MqConstants;
+import com.yp.demo.rabbitmq.config.RuntimeEnvConfig;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.Queue;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class FanoutConfig {
 
-    @Bean("fanout1")
-    public Queue fanout1() {
-        return new Queue("fanout1",true);  //true 是否持久
+    private final RuntimeEnvConfig runtimeEnvConfig;
+
+    public FanoutConfig(RuntimeEnvConfig runtimeEnvConfig) {
+        this.runtimeEnvConfig = runtimeEnvConfig;
     }
 
-    @Bean("fanout2")
-    public Queue fanout2() {
-        return new Queue("fanout2",true);  //true 是否持久
+    @Bean("fanoutQueueA")
+    public Queue fanoutQueueA() {
+        return new Queue(MqConstants.Fanout.FANOUT_QUEUE_NAME_A+runtimeEnvConfig.getMqEnvSuffix(),true);  //true 是否持久
+    }
+
+    @Bean("fanoutQueueB")
+    public Queue fanoutQueueB() {
+        return new Queue(MqConstants.Fanout.FANOUT_QUEUE_NAME_B+runtimeEnvConfig.getMqEnvSuffix(),true);  //true 是否持久
     }
 
     @Bean("fanoutExchange")
     public FanoutExchange fanoutExchange() {
-        return new FanoutExchange("fanoutExchange");
+        return new FanoutExchange(MqConstants.Fanout.FANOUT_EXCHANGE_NAME);
     }
 
-    @Bean("fanoutBind")
-    public Binding fanoutBind()  {
-        return BindingBuilder.bind(fanout1()).to(fanoutExchange());
+    //don`t need routeKey
+
+    @Bean("fanoutBindA")
+    public Binding fanoutBindA()  {
+        return BindingBuilder.bind(fanoutQueueA()).to(fanoutExchange());
     }
 
-    @Bean("fanoutBind2")
-    public Binding fanoutBind2()  {
-        return BindingBuilder.bind(fanout2()).to(fanoutExchange());
+    @Bean("fanoutBindB")
+    public Binding fanoutBindB()  {
+        return BindingBuilder.bind(fanoutQueueB()).to(fanoutExchange());
     }
 }

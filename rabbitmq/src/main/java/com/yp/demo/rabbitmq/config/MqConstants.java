@@ -10,22 +10,22 @@ public class MqConstants {
 
        /**queue name***/
 
-       public static final String DIRECT_QUEUE_NAME_A = "DIRECT_QUEUE_NAME_A";
+       public static final String DIRECT_QUEUE_NAME_A = "direct.queue.name.a";
 
-       public static final String DIRECT_QUEUE_NAME_B = "DIRECT_QUEUE_NAME_B";
+       public static final String DIRECT_QUEUE_NAME_B = "direct.queue_name.b";
 
 
        /**exchange name***/
 
-       public static final String DIRECT_EXCHANGE_NAME = "DIRECT_EXCHANGE_NAME";
+       public static final String DIRECT_EXCHANGE_NAME = "direct.exchange.name";
 
 
        /**route key ***/
 
-       public static final String DIRECT_ROUTE_KEY_A = "DIRECT_ROUTE_KEY_A";
+       public static final String DIRECT_ROUTE_KEY_A = "direct.route.key.a";
 
 
-       public static final String DIRECT_ROUTE_KEY_B = "DIRECT_ROUTE_KEY_B";
+       public static final String DIRECT_ROUTE_KEY_B = "direct.route.key.b";
 
 
    }
@@ -37,14 +37,14 @@ public class MqConstants {
 
         /**queue name***/
 
-        public static final String FANOUT_QUEUE_NAME_A = "DIRECT_QUEUE_NAME_A";
+        public static final String FANOUT_QUEUE_NAME_A = "fanout.queue.name.a";
 
-        public static final String FANOUT_QUEUE_NAME_B = "DIRECT_QUEUE_NAME_B";
+        public static final String FANOUT_QUEUE_NAME_B = "fanout.queue.name.b";
 
 
         /**exchange name***/
 
-        public static final String FANOUT_EXCHANGE_NAME = "DIRECT_EXCHANGE_NAME";
+        public static final String FANOUT_EXCHANGE_NAME = "fanout.exchange.name";
 
 
     }
@@ -56,37 +56,35 @@ public class MqConstants {
 
         /**queue name***/
 
-        public static final String TOPIC_QUEUE_NAME_A = "TOPIC_QUEUE_NAME_A";
+        public static final String TOPIC_QUEUE_NAME_A = "topic.queue.name.a";
 
-        public static final String TOPIC_QUEUE_NAME_B = "TOPIC_QUEUE_NAME_B";
+        public static final String TOPIC_QUEUE_NAME_B = "topic.queue.name.b";
 
 
         /**exchange name***/
 
-        public static final String TOPIC_EXCHANGE_NAME = "TOPIC_EXCHANGE_NAME";
+        public static final String TOPIC_EXCHANGE_NAME = "topic.exchange.name";
 
 
         /**route key***/
 
-        public static final String TOPIC_ROUTE_KEY_A = "TOPIC_ROUTE_KEY_A";
+        public static final String TOPIC_ROUTE_KEY_A = "topic.route.key.a";
 
-        public static final String TOPIC_ROUTE_KEY_B = "TOPIC_ROUTE_KEY_A";
+        public static final String TOPIC_ROUTE_KEY_B = "topic.route.key.b";
 
-        public static final String TOPIC_ROUTE_KEY_N = "ROUTE_KEY_TOPIC";
+        public static final String TOPIC_ROUTE_KEY_N = "route.key.topic";
 
 
         /**binding key***/
 
-        public static final String TOPIC_BINDING_KEY_A = "*._BINDING_KEY_A";
+        public static final String TOPIC_BINDING_KEY_A = "*.route.key.a";
 
-        public static final String TOPIC_BINDING_KEY_A_PREFIX = "#._A";
+        public static final String TOPIC_BINDING_KEY_A_PREFIX = "#.a";
 
-        public static final String TOPIC_BINDING_KEY_ALL = "#.ROUTE_KEY.#";
+        public static final String TOPIC_BINDING_KEY_ALL = "#.route.key.#";
 
 
     }
-
-
 
 
     public static String[] queueNames(){
