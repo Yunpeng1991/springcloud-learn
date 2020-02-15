@@ -10,9 +10,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.yp.demo</groupId>
-	<artifactId>spring-learn-demo</artifactId>
+	<artifactId>spring-learn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-learn-demo</name>
+	<name>spring-learn</name>
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
