@@ -21,6 +21,10 @@ public class DirectConfig {
 
     /*queue declare***/
 
+    /***
+     *  declare a queue(durable=true,exclusive=false,autoDelete=false)声明一个持久化、不排他、不自动删除的队列
+     * @return
+     */
     @Bean("directQueueA")
     public Queue directQueueA() {
         return new Queue(MqConstants.Direct.DIRECT_QUEUE_NAME_A+envConfig.getMqEnvSuffix(),true);  //true 是否持久

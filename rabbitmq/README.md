@@ -24,6 +24,8 @@ topic模式：将路由键和某模式进行匹配，此时队列需要绑定在
 
 -BlockQueueConsumer.handle
 
+-SimpleMessageListenerContainer-mainLoop
+
 
 ### INSTALL MQ IN DOCKER
 
